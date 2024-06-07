@@ -20,4 +20,11 @@ spec:
       containers:
       - name: __SERVICE_NAME__-dbmigration
         imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 250Mi
+          limits:
+            cpu: 600m
+            memory: 600Mi
   backoffLimit: 2
