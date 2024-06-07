@@ -27,8 +27,8 @@ spec:
         - name: SUBSCRIPTION_NAME
           value: ${SUBSCRIPTION_NAME}
         - name: PG_WRITER_AD_GROUP
-          value: "AAG-Azure-ADP-__SERVICE_CODE__-__ENVIRONMENT____ENV_INSTANCE__-PostgresDB_Writer"
+          value: "AAG-Azure-ADP-__TEAM_NAME__-__ENVIRONMENT____ENV_INSTANCE__-PostgresDB_Writer"
         - name: PG_READER_AD_GROUP
-          value: "AAG-Azure-ADP-__SERVICE_CODE__-__ENVIRONMENT____ENV_INSTANCE__-PostgresDB_Reader"
+          value: "AAG-Azure-ADP-__TEAM_NAME__-__ENVIRONMENT____ENV_INSTANCE__-PostgresDB_Reader"
         - name: DB_MIGRATION_VERSION
           value: __MIGRATION_VERSION_TAG__
