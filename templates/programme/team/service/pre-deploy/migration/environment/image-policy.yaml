@@ -11,4 +11,4 @@ spec:
     name: __SERVICE_NAME__-dbmigration
   policy:
     semver:
-      range: '>=0.1.0'
+      range: __IMAGE_POLICY_VERSION_RANGE__
