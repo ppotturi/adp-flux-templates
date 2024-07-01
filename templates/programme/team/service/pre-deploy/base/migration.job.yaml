@@ -1,8 +1,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: __SERVICE_NAME__-pre-dbmigration
-  namespace: flux-config
+  name: __SERVICE_NAME__-dbmigration
+  namespace: __TEAM_NAME__
   labels:
     azure.workload.identity/use: "true"
     backstage.io/kubernetes-id: __SERVICE_NAME__
@@ -17,13 +17,8 @@ spec:
     spec:
       serviceAccountName: ${PLATFORM_DB_ADMIN}
       restartPolicy: Never
-      volumes:
-      - name: custom-root-ca
-        secret:
-          secretName: custom-ca-trust-secret
-          optional: true
       containers:
-      - name: __SERVICE_NAME__-pre-dbmigration
+      - name: __SERVICE_NAME__-dbmigration
         imagePullPolicy: Always
         resources:
           requests:
@@ -32,9 +27,4 @@ spec:
           limits:
             cpu: 500m
             memory: 600Mi
-        volumeMounts:
-          - name: custom-root-ca
-            readOnly: true
-            mountPath: /etc/ssl/certs/defra-egress-firewall-cert-01.crt
-            subPath: defra-egress-firewall-cert-01.crt
   backoffLimit: 2
