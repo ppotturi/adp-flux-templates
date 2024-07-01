@@ -34,4 +34,4 @@ spec:
       - kind: ConfigMap
         name: adp-platform-vars
       - kind: ConfigMap
-        name: "__SERVICE_NAME__-mi-credential"
+        name: "__TEAM_NAME__-mi-credential"
