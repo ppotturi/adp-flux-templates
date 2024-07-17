@@ -9,5 +9,5 @@ metadata:
     backstage.io/kubernetes-team: __TEAM_NAME__
 spec:
   image: ${APPLICATION_ACR_NAME}.azurecr.io/image/__SERVICE_NAME__-dbmigration
-  interval: 5m0s
+  interval: 3m0s
   provider: azure
